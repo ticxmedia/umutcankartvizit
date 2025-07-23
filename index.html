@@ -4,69 +4,57 @@
   <meta charset="UTF-8">
   <title>Umutcan Doğan | Ticx Media</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: Arial, sans-serif;
       background-color: #f2f2f2;
-      text-align: center;
       margin: 0;
-      padding: 40px;
+      padding: 0;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
     }
     .card {
       background-color: white;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      max-width: 400px;
-      margin: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      animation: fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
     .logo {
-      width: 100px;
+      width: 120px;
       margin-bottom: 20px;
+      opacity: 0;
+      animation: logoAppear 1.4s ease 0.5s forwards;
+    }
+    @keyframes logoAppear {
+      to { opacity: 1; transform: scale(1); }
     }
     h2 {
-      font-size: 24px;
-      margin-bottom: 5px;
+      font-size: 26px;
+      margin-bottom: 10px;
     }
     p {
-      font-size: 16px;
+      font-size: 17px;
       margin: 6px 0;
     }
     a.tel {
       display: block;
-      font-size: 18px;
+      font-size: 19px;
       color: #007AFF;
       text-decoration: none;
-      margin: 10px 0;
+      margin: 12px 0;
     }
-    .social img {
-      width: 24px;
-      vertical-align: middle;
-      margin-right: 6px;
-    }
-    .vcf {
-      margin-top: 20px;
-      display: inline-block;
-      padding: 10px 16px;
-      background-color: #007AFF;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-  <div class="card">
-    <img class="logo" src="logo.png" alt="Logo">
-    <h2>Umutcan Doğan</h2>
-    <p>Ticx Media</p>
-    <a class="tel" href="tel:+905466827682">📞 +90 546 682 76 82</a>
-    <p class="social">
-      <a href="https://www.instagram.com/ticxmedia" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"> @ticxmedia
-      </a>
-    </p>
-    <a class="vcf" href="umutcan.vcf" download>📥 Rehbere Ekle</a>
-  </div>
-</body>
-</html>
